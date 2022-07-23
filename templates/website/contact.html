@@ -4,8 +4,8 @@
   <!-- Start Main -->
   <main>
     <!-- Start Form -->
-    <form method="post" action="{% url 'website:contact' %}" class="contact-form" autocomplete="on">
-      {% csrf_token %}
+    <form class="contact-form" action="{% url 'website:contact' %}"  method="post"  autocomplete="on">
+    {% csrf_token %}
       <div class="container">
         <div class="row">
           <div class="col-12 col-lg-4">
@@ -72,6 +72,20 @@
         </div>
       </div>
     </form>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-lg-4">
+      {% for message in messages %}
+        <div class="alert {{ message.tags }} fade show alert-dismissible d-flex" role="alert">
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          <p class="mb-0 ms-4">{{ message }}</p>
+        </div>
+        {% endfor %}
+    </div>
+  </div>
+</div>
+
 
     <!-- End Form -->
   </main>
