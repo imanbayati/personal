@@ -2,10 +2,12 @@ from django.shortcuts import render
 from . models import *
 from . forms import ContactForm
 from django.contrib import messages
+from work.models import Work
 # Create your views here.
 def home_page(request):
+    works = Work.objects.filter(status=1)[:3]
     files = File.objects.all()
-    context = {'files': files}
+    context = {'files': files,'works':works}
     return render(request, 'website/home.html',context)
 
 def contact_page(request):

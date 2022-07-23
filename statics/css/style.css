@@ -1,6 +1,8 @@
 @charset "utf-8";
 /* CSS Document */
-
+nav{
+	border-bottom: 1px solid #797d7f;
+}
 *{
 	font-family: iranyekan;
 }
@@ -127,7 +129,7 @@ line-height: 3;
 
 .card-work, .card-work .card-img-top img{
 	border-radius: 7px;
-	height: 280px;
+	height: 400px;
 	max-width: auto;
 }
 
