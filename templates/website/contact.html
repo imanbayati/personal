@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+  <!-- Start Main -->
+  <main>
+    <!-- Start Form -->
+    <form method="post" action="{% url 'website:contact' %}" class="contact-form" autocomplete="on">
+      {% csrf_token %}
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-4">
+            <div class="form-floating mb-4 has-validation">
+              <input type="text" class="form-control bg-transparent text-white" name="name" id="name" required placeholder=" نام و نام‌خانوادگی *" />
+              <label for="name"> نام و نام‌خانوادگی *</label>
+            </div>
+            <div class="invalid-feedback">لطفا نام و نام‌خانوادگی خود را به درستی وارد نمایید</div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="form-floating mb-4">
+              <input type="text" inputmode="tel" class="form-control bg-transparent text-white" name="phone" required id="phone" placeholder="شماره تماس *" />
+              <label for="phone">شماره تماس *</label>
+            </div>
+            <div class="invalid-feedback">لطفا شماره تماس خود را به درستی وارد نمایید</div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="form-floating mb-4">
+              <input type="email" class="form-control bg-transparent text-white" name="email" id="email" required placeholder=" ایمیل *" />
+              <label for="email"> ایمیل * </label>
+            </div>
+            <div class="invalid-feedback">لطف ایمیل خود را به درستی وارد نمایید</div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="form-floating mb-4">
+              <input type="url" inputmode="url" class="form-control bg-transparent text-white" value="" name="site" id="site" placeholder="سایت" />
+              <label for="site">سایت</label>
+            </div>
+            <div class="invalid-feedback">لطفا آدرس سایت خود را به درستی وارد نمایید</div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="form-floating mb-4">
+              <input type="text" class="form-control bg-transparent text-white" id="company" value="" name="company" placeholder="شرکت" />
+              <label for="company">شرکت</label>
+            </div>
+            <div class="invalid-feedback">لطفا اسم شرکت خود را به درستی وارد نمایید</div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="form-floating mb-4">
+              <input type="text" class="form-control bg-transparent text-white" id="content" name="content" required placeholder="موضوع *" />
+              <label for="content">موضوع *</label>
+            </div>
+            <div class="invalid-feedback">لطفا موضوع خود را به درستی وارد نمایید</div>
+          </div>
+          <div class="col-12">
+            <div class="form-floating mb-4">
+              <textarea class="form-control bg-transparent text-white" placeholder="پیام شما *" required name="message" id="text"></textarea>
+              <label for="text">پیام شما *</label>
+            </div>
+          </div>
+          <div class="d-flex flex-column flex-lg-row justify-content-between align-items-center mb-5">
+            <div class="btn-contact mb-3">
+              <button class="btn btn-outline-warning" name="submit" type="submit">ارسال پیام</button>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center bg-warning px-2 icon-contact-2">
+              <a target="_blank" href="mailto: bayati.pro@gmail.com" class="text-dark me-2"><i class="fa-solid fa-envelope mt-3"></i></a>
+              <a target="_blank" href="http://www.linkedin.com/in/bayatipro" class="text-dark me-2"><i class="fa-brands fa-linkedin-in mt-3"></i></a>
+              <a target="_blank" href="https://www.instagram.com/bayati.pro/" class="text-dark me-2"><i class="fa-brands fa-instagram mt-3"></i></a>
+              <a target="_blank" href="https://telegram.me/iman9992" class="text-dark me-2"><i class="fa-brands fa-telegram mt-3"></i></a>
+              <a target="_blank" href="https://wa.me/09912311015" class="text-dark me-2"><i class="fa-brands fa-whatsapp mt-3"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <!-- End Form -->
+  </main>
+  <!-- End Main -->
+{% endblock %}

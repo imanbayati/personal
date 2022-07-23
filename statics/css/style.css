@@ -180,6 +180,7 @@ footer small{
 	box-shadow: none !important;
 	border: 1px solid white !important;
 }
+
 .contact-form textarea{
 	box-shadow: none !important;
 	border: 1px solid white !important;
@@ -196,6 +197,19 @@ footer small{
 .icon-contact-2{
 	border-radius: 6px;
 	padding: initial !important;
+}
+.icon-contact-2 svg{
+	font-size: 22px;
+    border-radius: 100%;
+    border: solid 1px #020513;
+    padding: 8px;
+    margin-top: 5px !important;
+    transition: .2s;
+}
+.icon-contact-2 svg:hover{
+	background-color: #020513;
+	color: #ffc925;
+    transition: .2s;
 }
 
 
