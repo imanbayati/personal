@@ -1,6 +1,5 @@
 	{% extends 'base.html' %}
 	{% load static %}
-
     {% block content %}
 	<!--Start Main-->
 	<main>
@@ -76,11 +75,9 @@
 			<div class="container">
 				<div class="row">
 					<div class="slider-1st">
-
-					<div class="slider-22 slider">
+					<div class="slider22 d-flex flex-column flex-lg-row justify-content-between">
 					{% for work in works %}
-					<div class="col-12 col-lg-4">
-						<div class="card border-0 card-work mt-5 mb-5">
+						<div class="card border-0 card-work me-3 mt-5 mb-5">
 							<div class="card-img-top">
 								<div class="overlay">
 									<a class="icon-over" href="{{work.file.url}}">
@@ -95,7 +92,6 @@
 								<img class="img-fluid d-block mx-auto w-100" src="{{work.image.url}}" alt="picture">
 							</div>
 						</div>
-					</div>	
 					{% endfor %}
 				</div>
 			</div>				

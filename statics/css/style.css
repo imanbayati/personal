@@ -217,4 +217,13 @@ footer small{
     transition: .2s;
 }
 
-
+.slick-prev:before, .slick-next:before{
+	font-size:30px !important;
+	color: #ffc925 !important;
+	transition: .2s;
+}
+.slick-dots li button:before{
+	color: #ffc925 !important;
+	transition: .2s;
+	font-size: 8px !important;
+}

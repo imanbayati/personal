@@ -8,8 +8,10 @@
 <link type="text/css" rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
 <link type="text/css" rel="stylesheet" href="{% static 'css/bootstrap.rtl.min.css' %}">
 <link type="text/css" rel="stylesheet" href="{% static 'css/hover-min.css' %}">
-<link type="text/css" rel="stylesheet" href="{% static 'css/slick-themes.css' %}">
-<link type="text/css" rel="stylesheet" href="{% static 'css/slick.css' %}">
+<!-- Add the slick-theme.css if you want default styling -->
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<!-- Add the slick-theme.css if you want default styling -->
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 <link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 
@@ -85,9 +87,9 @@
 	
 <script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>	
 <script src="{% static 'js/bootstrap.min.js' %}"></script>
-<script src="{% static 'js/popper.js' %}"></script>
+<script type="text/javascript" src="https://unpkg.com/@popperjs/core@2"></script>
 <script src="{% static 'js/all.min.js' %}"></script>
-<script src="{% static 'js/slick.min.js' %}"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="{% static 'js/main.js' %}"></script>
 	
 </body>

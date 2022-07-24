@@ -1,74 +1,39 @@
-// JavaScript Document
-$('.slider-22').slick({
+$('.slider22').slick({
+  autoplay: true,
+  autoplaySpeed: 1500,
+  pauseOnDotsHover: true,
+  rtl: true,
   dots: true,
-	rtl: true,
+  infinite: false,
   speed: 300,
-	autoplay:true,
-  slidesToShow: 4,
-  slidesToScroll: 1,
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-		autoplay: true,
-        slidesToShow: 2,
-        slidesToScroll: 2,
-        infinite: true,
-        dots: true
-      }
-    },
-    {
-      breakpoint: 540,
-      settings: {
-		autoplay: true,
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-		autoplay: true,
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    }
-
-  ]
-});$('.slider3').slick({
-  dots: true,
-	rtl: true,
-  speed: 300,
-	autoplay:true,
   slidesToShow: 3,
-  slidesToScroll: 1,
+  slidesToScroll: 2,
   responsive: [
     {
       breakpoint: 1024,
       settings: {
-		autoplay: true,
         slidesToShow: 2,
         slidesToScroll: 2,
-        infinite: true,
+        infinite: false,
         dots: true
       }
     },
     {
-      breakpoint: 540,
+      breakpoint: 600,
       settings: {
-		autoplay: true,
-        slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToShow: 2,
+        slidesToScroll: 2
       }
     },
     {
       breakpoint: 480,
       settings: {
-		autoplay: true,
         slidesToShow: 1,
         slidesToScroll: 1
       }
     }
-
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
   ]
 });

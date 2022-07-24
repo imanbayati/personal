@@ -12,7 +12,7 @@ def home_page(request):
 
 def contact_page(request):
     if request.method == 'POST':
-        form = ContactForm(request.POST or None)
+        form = ContactForm(request.POST)
         if form.is_valid():
            form.save() 
            messages.add_message(request, messages.SUCCESS, 'پیام شما با موفقیت ثبت شد')
