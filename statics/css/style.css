@@ -118,7 +118,7 @@ line-height: 3;
 .overlay .icon-over div{
 	position: absolute;
 	top: 45%;
-	left: 38%;
+	left: 41%;
 }
 .card-work:hover .overlay{
 	visibility: visible;
@@ -131,6 +131,9 @@ line-height: 3;
 	border-radius: 7px;
 	height: 400px;
 	max-width: auto;
+}
+.card-work-single, .card-work-single img{
+	border-radius: 7px;
 }
 
 .see-more-btn{

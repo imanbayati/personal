@@ -1,192 +1,55 @@
-	{% extends 'base.html' %}
-	{% load static %}
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+  <!-- Start Main -->
+  <main>
+    <!-- Start Check Box -->
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <form class="form-group check-site">
+            <div class="form-check form-check-inline m-0">
+              <input class="form-check-input" type="checkbox" name="django" />
+              <label class="form-check-label text-white" for="django"><small>django</small></label>
+            </div>
+            <div class="from-check form-check-inline m-0">
+              <input class="form-check-input" name="html" type="checkbox" />
+              <label class="form-check-label text-white" for="html"><small>html</small></label>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <br /><br />
+    <!-- End Check Box -->
 
-    {% block content %}
-	<!--Start Main-->
-	<main>
-		<!--Start Card Top-->
-		<div class="container">
-			<div class="row">
-				<div class="col-12">
-					<div class="card card-me mt-5">
-						<div class="card-body flex-column">
-							<p class="text-white">
-								<strong>
-									سلام من ایمان بیاتی هستم
-								</strong>
-							</p>
-							<small class="text-white">
-								من ایمان بیاتی 21 ساله و ساکن شهر تهران هستم. در حال حاضر دانشجوی کارشناسی دبیری ریاضی هستم. من برای طراحی سایت در حوزه‌های فرانت اند و بک اند دوره های مختلفی رو گذروندم و زبان برنامه نویسی پایتون رو یادگرفتم. همچنان هم در حال یادگیری هستم و هیچوقت از یادگیری دست بر نمیدارم.
-								اگر تمایل دارید که با من یه صورت دورکاری و پاره وقت کار کنید خوشحال میشم باهم بیشتر آشنا شیم:
-							</small>
-							<br><br><br>
-							<div class="d-flex flex-column flex-lg-row icon-contact justify-content-around align-items-center">
-								<a target="_blank" href="mailto: bayati.pro@gmail.com" class="text-white btn bg-transparent border-0">
-									<i class="fa-solid fa-envelope mt-3"></i>
-									<small class="mt-1">bayati.pro@gmail.com</small>
-								</a>
-								<a target="_blank" href="https://www.instagram.com/bayati.pro/" class="text-white btn bg-transparent border-0">
-									<i class="fa-brands fa-instagram mt-3"></i>
-									<small class="mt-1">bayati.pro</small>
-								</a>
-								<a target="_blank" href="http://www.linkedin.com/in/bayatipro" class="text-white btn bg-transparent border-0">
-									<i class="fa-brands fa-linkedin-in mt-3"></i>
-									<small class="mt-1">linkdin.me</small>
-								</a>
-								<a target="_blank" href="https://telegram.me/iman9992" class="text-white btn bg-transparent border-0">
-									<i class="fa-brands fa-telegram mt-3"></i>
-									<small class="mt-1">telegram.me</small>
-								</a>
-								<a target="_blank" href="https://wa.me/09912311015" class="text-white btn bg-transparent border-0">
-									<i class="fa-brands fa-whatsapp mt-3"></i>
-									<small class="mt-1">whatsapp.me</small>
-								</a>
-								<a target="_blank" href="tel:+989912311015" class="text-white btn bg-transparent border-0">
-									<i class="fa-solid fa-mobile-button mt-3"></i>
-									<small class="mt-1">09912311015</small>
-								</a>
-							</div>
-							<br><br>
-							{% for file in files %}
-							<a href="{{file.file.url}}" class="bg-transparent justify-content-center btn-download-file">
-								<button class="btn btn-warning border-0 d-flex me-auto" type="submit">
-									<i class="fa-solid fa-file-arrow-down mt-3"></i>
-									<small class="mt-1 ms-1">دانلود رزومه</small>
-								</button>
-							</a>
-							{% endfor %}
-							<br>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<br>
-		<!--End Card Top-->
-		
-		
-		<!--Start Work-->
-		
-		<div class="container">
-			<p class="text-white text-center text-lg-start text-work headline mb-4">
-				<strong>نمونه کارهای من</strong>
-			</p>
-		</div>
-		<div class="bg-work mb-3">
-			<div class="container">
-				<div class="row">
-					<div class="col-12 col-lg-4">
-						<div class="card border-0 card-work mt-5 mb-5">
-							<div class="card-img-top">
-								<div class="overlay">
-									<a class="icon-over" href="#">
-										<div class="text-center d-flex align-items-center d-block">
-											<button class="btn btn-warning d-flex hvr-shrink" type="button">
-												<i class="fa fa-eye mt-1"></i>
-												<p class="mb-0 ms-1">مشاهده</p>
-											</button>
-										</div>
-									</a>
-								</div>
-								<img class="img-fluid d-block mx-auto w-100" src="{% static 'img/Capture.PNG' %}" alt="picture">
-							</div>
-						</div>
-					</div>					
-					<div class="col-12 col-lg-4">
-						<div class="card border-0 card-work mt-5 mb-5">
-							<div class="card-img-top">
-								<div class="overlay">
-									<a class="icon-over" href="#">
-										<div class="text-center d-flex align-items-center d-block">
-											<button class="btn btn-warning d-flex hvr-shrink" type="button">
-												<i class="fa fa-eye mt-1"></i>
-												<p class="mb-0 ms-1">مشاهده</p>
-											</button>
-										</div>
-									</a>
-								</div>
-								<img class="img-fluid d-block mx-auto w-100" src="{% static 'img/Capture.PNG' %}" alt="picture">
-							</div>
-						</div>
-					</div>					
-					<div class="col-12 col-lg-4">
-						<div class="card border-0 card-work mt-5 mb-5">
-							<div class="card-img-top">
-								<div class="overlay">
-									<a class="icon-over" href="#">
-										<div class="text-center d-flex align-items-center d-block">
-											<button class="btn btn-warning d-flex hvr-shrink" type="button">
-												<i class="fa fa-eye mt-1"></i>
-												<p class="mb-0 ms-1">مشاهده</p>
-											</button>
-										</div>
-									</a>
-								</div>
-								<img class="img-fluid d-block mx-auto w-100" src="{% static 'img/Capture.PNG' %}" alt="picture">
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="pb-3 see-more-btn">
-					<button class="btn btn-outline-warning d-flex hvr-shrink" type="button">
-						<i class="fa fa-eye mt-1"></i>
-						<p class="mb-0 ms-1">مشاهده</p>
-					</button>
-				</div>
-			</div>
-		</div>
-		<br><br><br><br>
-		<!--End Work-->
-		
-		
-		<!--Start Skills-->
-		<div class="container">
-			<p class="text-white text-center text-lg-start text-work headline mb-4">
-				<strong>مهارت ها</strong>
-			</p>
-			<div class="row">
-				<div class="col-12 col-lg-4">
-					<div class="card border-0 card-skil">
-						<div class="card-body">
-							<div class="icon-skill mb-3 text-center text-white">
-								<i class="fa-brands fa-python"></i>
-							</div>
-							<p class="text-justify text-white text-center">
-								برای برنامه نویسی بک اند سایت از زبان برنامه نویسی پایتون و فریمورک قدرتمند پایتون به نام django . به دلیل سرعت و دسترسی بالا و امنیت بالا استفاده می‌کنم
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-12 col-lg-4">
-					<div class="card border-0 card-skil">
-						<div class="card-body">
-							<div class="icon-skill mb-3 text-center text-white">
-								<i class="fa-brands fa-bootstrap"></i>
-							</div>
-							<p class="text-justify text-white text-center">
-								خب html و css که پایه ای ترین مبحث برنامه نویسی که بلدم ولی در کنار استفاده از این دو برای فرانت اند ، از یک کتابخونه قدرتمند css به نام bootstrap استفاده میکنم.
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-12 col-lg-4">
-					<div class="card border-0 card-skil">
-						<div class="card-body">
-							<div class="icon-skill mb-3 text-center text-white">
-								<i class="fa-brands fa-figma"></i>
-							</div>
-							<p class="text-justify text-white text-center">
-								  اوایل برای طراحی سایت از برنامه adobe photoshop استفاده می‌کردم ولی الآن از برنامه‌های adobe xd و figma استفاده می‌کنم چون تخصصی برای طراحی سایت استفاده میشن 
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<br><br>
-		<!--End Skills-->
-		
-		
-	</main>
-	<!--End Main-->
-    {% endblock %}
+    <!-- Start Posts -->
+    <div class="container">
+      <div class="row">
+        {% for work in works %}
+          <div class="col-12 col-lg-4">
+            <div class="card border-0 card-work mb-5">
+              <div class="card-img-top">
+                <div class="overlay">
+                  <a class="icon-over" href="{{work.file.url}}">
+                    <div class="text-center d-flex align-items-center d-block">
+                      <button class="btn btn-warning d-flex hvr-shrink" type="button">
+                        <i class="fa fa-download mt-1"></i>
+                        <p class="mb-0 ms-1">دانلود</p>
+                      </button>
+                    </div>
+                  </a>
+                </div>
+                <img class="img-fluid d-block mx-auto w-100" src="{{work.image.url}}" alt="picture" />
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <br /><br /><br />
+    <!-- End Posts -->
+  </main>
+  <!-- End Main -->
+{% endblock %}

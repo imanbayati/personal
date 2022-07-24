@@ -8,6 +8,8 @@
 <link type="text/css" rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
 <link type="text/css" rel="stylesheet" href="{% static 'css/bootstrap.rtl.min.css' %}">
 <link type="text/css" rel="stylesheet" href="{% static 'css/hover-min.css' %}">
+<link type="text/css" rel="stylesheet" href="{% static 'css/slick-themes.css' %}">
+<link type="text/css" rel="stylesheet" href="{% static 'css/slick.css' %}">
 <link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 
@@ -40,7 +42,7 @@
           				<a class="nav-link active" aria-current="page" href="{% url 'website:home' %}">خانه</a>
         			</li>
        				<li class="nav-item dropdown work">
-          				<a class="nav-link dropdown-toggle work-dropdown" href="#"  role="button" data-bs-toggle="dropdown">
+          				<a class="nav-link dropdown-toggle work-dropdown" aria-current="page" href="{% url 'work:home' %}">
             				نمونه کارها
           				</a>
           				<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -59,6 +61,7 @@
 
 
 	</header>
+	<br><br><br>
 	<!--End Header-->
 	
 	<!--Start Main-->
@@ -81,9 +84,11 @@
 	
 	
 <script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>	
-<script src="{% static 'js/all.min.js' %}"></script>
 <script src="{% static 'js/bootstrap.min.js' %}"></script>
 <script src="{% static 'js/popper.js' %}"></script>
+<script src="{% static 'js/all.min.js' %}"></script>
+<script src="{% static 'js/slick.min.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
 	
 </body>
 	

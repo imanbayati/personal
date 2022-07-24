@@ -75,16 +75,19 @@
 		<div class="bg-work mb-3">
 			<div class="container">
 				<div class="row">
+					<div class="slider-1st">
+
+					<div class="slider-22 slider">
 					{% for work in works %}
 					<div class="col-12 col-lg-4">
 						<div class="card border-0 card-work mt-5 mb-5">
 							<div class="card-img-top">
 								<div class="overlay">
-									<a class="icon-over" href="#">
+									<a class="icon-over" href="{{work.file.url}}">
 										<div class="text-center d-flex align-items-center d-block">
 											<button class="btn btn-warning d-flex hvr-shrink" type="button">
-												<i class="fa fa-eye mt-1"></i>
-												<p class="mb-0 ms-1">مشاهده</p>
+												<i class="fa fa-download mt-1"></i>
+												<p class="mb-0 ms-1">دانلود</p>
 											</button>
 										</div>
 									</a>
@@ -93,14 +96,18 @@
 							</div>
 						</div>
 					</div>	
-					{% endfor %}				
+					{% endfor %}
 				</div>
+			</div>				
+				</div>
+				<a href = "{% url 'work:home' %}" >
 				<div class="pb-3 see-more-btn">
 					<button class="btn btn-outline-warning d-flex hvr-shrink" type="button">
 						<i class="fa fa-eye mt-1"></i>
 						<p class="mb-0 ms-1">مشاهده</p>
 					</button>
 				</div>
+				</a>
 			</div>
 		</div>
 		<br><br><br><br>

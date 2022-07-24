@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+  <!-- Start Main -->
+  <main>
+    <!-- Start Check Box -->
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <form class="form-group check-site">
+            <div class="form-check form-check-inline m-0">
+              <input class="form-check-input" type="checkbox" name="django" />
+              <label class="form-check-label text-white" for="django"><small>django</small></label>
+            </div>
+            <div class="from-check form-check-inline m-0">
+              <input class="form-check-input" name="html" type="checkbox" />
+              <label class="form-check-label text-white" for="html"><small>html</small></label>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <br /><br />
+    <!-- End Check Box -->
+
+    <!-- Start Posts -->
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <p class="text-white mb-4">
+            <strong>همه قالب‌ها</strong>
+          </p>
+        </div>
+        {% for work in works %}
+          <div class="col-12">
+            <div class="card border-0 card-work-single mb-5">
+              <div class="card-img-top">
+                {{work.content.html|safe}}
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <br><br><br>
+    <!-- End Posts -->
+  </main>
+  <!-- End Main -->
+{% endblock %}

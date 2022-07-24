@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'website',
     'work',
+    'django_summernote',
+    'django_quill',
 ]
 
 MIDDLEWARE = [
@@ -62,6 +64,8 @@ MESSAGE_TAGS = {
         messages.ERROR: 'alert-danger',
  }
 
+SUMMERNOTE_THEME = 'bs5' 
+
 ROOT_URLCONF = 'personal.urls'
 
 TEMPLATES = [
@@ -79,7 +83,9 @@ TEMPLATES = [
         },
     },
 ]
-
+#SUMMERNOTE_CONFIG = {
+    #'attachment_filesize_limit': [],
+#}
 WSGI_APPLICATION = 'personal.wsgi.application'
 
 
@@ -142,3 +148,5 @@ MEDIA_DIRS = BASE_DIR / 'media'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+X_FRAME_OPTIONS = 'SAMEORIGIN'
