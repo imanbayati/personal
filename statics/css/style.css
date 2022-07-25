@@ -216,7 +216,9 @@ footer small{
 	color: #ffc925;
     transition: .2s;
 }
-
+.check-site a input:hover{
+	cursor: pointer !important;
+}
 .slick-prev:before, .slick-next:before{
 	font-size:30px !important;
 	color: #ffc925 !important;
@@ -226,4 +228,17 @@ footer small{
 	color: #ffc925 !important;
 	transition: .2s;
 	font-size: 8px !important;
+}
+.category .category-title{
+	margin-left: 1.3rem;
+}
+.category .category-button p{
+    transition: .2s;
+}
+.category .category-button p:hover{
+	color: #ffc925 !important;
+    transition: .2s;
+}
+.category .category-button p::target-text{
+	color: #ffc925 !important;
 }

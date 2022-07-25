@@ -2,7 +2,7 @@ from django.shortcuts import render
 from . models import *
 from . forms import ContactForm
 from django.contrib import messages
-from work.models import Work
+from work.models import *
 # Create your views here.
 def home_page(request):
     works = Work.objects.filter(status=1)[:6]

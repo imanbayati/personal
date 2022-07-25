@@ -3,6 +3,19 @@
 {% block content %}
   <!-- Start Main -->
   <main>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-4">
+          {% for message in messages %}
+            <div class="alert {{ message.tags }} fade show alert-dismissible d-flex" role="alert">
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              <p class="mb-0 ms-4">{{ message }}</p>
+            </div>
+            {% endfor %}
+        </div>
+      </div>
+    </div>
+    
     <!-- Start Form -->
     <form class="contact-form" action="{% url 'website:contact' %}"  method="post"  autocomplete="on">
     {% csrf_token %}
@@ -31,14 +44,14 @@
           </div>
           <div class="col-12 col-lg-4">
             <div class="form-floating mb-4">
-              <input type="url" inputmode="url" class="form-control bg-transparent text-white" value="" name="site" id="site" placeholder="سایت" />
+              <input type="text" inputmode="url" class="form-control bg-transparent text-white" name="site" id="site" placeholder="سایت" />
               <label for="site">سایت</label>
             </div>
             <div class="invalid-feedback">لطفا آدرس سایت خود را به درستی وارد نمایید</div>
           </div>
           <div class="col-12 col-lg-4">
             <div class="form-floating mb-4">
-              <input type="text" class="form-control bg-transparent text-white" id="company" value="" name="company" placeholder="شرکت" />
+              <input type="text" class="form-control bg-transparent text-white" id="company" name="company" placeholder="شرکت" />
               <label for="company">شرکت</label>
             </div>
             <div class="invalid-feedback">لطفا اسم شرکت خود را به درستی وارد نمایید</div>
@@ -73,18 +86,6 @@
       </div>
     </form>
 
-<div class="container">
-  <div class="row">
-    <div class="col-12 col-lg-4">
-      {% for message in messages %}
-        <div class="alert {{ message.tags }} fade show alert-dismissible d-flex" role="alert">
-          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-          <p class="mb-0 ms-4">{{ message }}</p>
-        </div>
-        {% endfor %}
-    </div>
-  </div>
-</div>
 
 
     <!-- End Form -->

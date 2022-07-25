@@ -6,6 +6,7 @@ from django_quill.fields import QuillField
     
 class Category(models.Model):
     name = models.CharField(max_length=200)
+    image = models.ImageField(upload_to='img/',default='img/default')
     def __str__(self):
         return self.name
     

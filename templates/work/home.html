@@ -7,16 +7,14 @@
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <form class="form-group check-site">
-            <div class="form-check form-check-inline m-0">
-              <input class="form-check-input" type="checkbox" name="django" />
-              <label class="form-check-label text-white" for="django"><small>django</small></label>
-            </div>
-            <div class="from-check form-check-inline m-0">
-              <input class="form-check-input" name="html" type="checkbox" />
-              <label class="form-check-label text-white" for="html"><small>html</small></label>
-            </div>
-          </form>
+          <div class="d-flex category">
+            <p class="text-white category-title"><strong>دسته بندی بر اساس :</strong></p>
+            {% for category in categories %}
+            <a class="category-button me-2" href="{% url 'work:category' cat_name=category.name %}" type="submit">
+              <p class="text-white" name="{{category.name}}">{{category.name}}</p>
+            </a>
+            {% endfor %}        
+          </div>
         </div>
       </div>
     </div>
