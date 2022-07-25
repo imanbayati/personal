@@ -45,8 +45,38 @@
         {% endfor %}
       </div>
     </div>
-
-    <br /><br /><br />
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="page">
+            <ul class="pagination justify-content-center">
+              {% if works.has_previous %}
+              <li class="page-item me-2">
+                <a class="page-link" href="?page={{works.previous_page_number}}" aria-label="previous">
+                  <i aria-hidden="true" class="fa fa-chevron-right"></i>
+                </a>
+              </li>
+              {% endif %}
+              {% for page in works.paginator.page_range %}
+                {% if works.number == page %}
+                <li class="page-item me-2 active"><a class="page-link" href="?page={{page}}">{{page}}</a></li>
+                {% else %}
+                <li class="page-item me-2"><a class="page-link" href="?page={{page}}">{{page}}</a></li>
+                {% endif %}
+              {% endfor %}
+              {% if works.has_next %}
+              <li class="page-item me-2">
+                <a class="page-link" href="?page={{works.next_page_number}}" aria-label="next">
+                  <i aria-hidden="true" class="fa fa-chevron-left"></i>
+                </a>
+              </li>
+              {% endif %}
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <br><br>
     <!-- End Posts -->
   </main>
   <!-- End Main -->

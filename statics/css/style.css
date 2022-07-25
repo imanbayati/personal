@@ -1,6 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
-nav{
+.navbar-menu{
 	border-bottom: 1px solid #797d7f;
 }
 *{
@@ -175,6 +175,9 @@ line-height: 3;
 .card-skil:hover.card-skil .card-body p{
 	color: #ffc925 !important;
 }
+.figma .icon-skill svg{
+	padding-inline: 20px;
+}
 footer{
 	background-color: rgba(137,136,136,30%);
 }
@@ -241,4 +244,21 @@ footer small{
 }
 .category .category-button p::target-text{
 	color: #ffc925 !important;
+}
+.page li a{
+	border-radius: 100% !important;
+    background-color: transparent;
+    border: 1px solid #ffc925;
+    color: #ffc925;
+    transition: .2s;
+}
+.page li a:hover, .page li a:focus, .page li.active a{
+    background-color: #ffc925 !important;
+    color: #020513;
+    transition: .2s;
+	border: 1px solid #ffc925 !important;
+}
+.page li a svg{
+	margin-top: 3px;
+	margin-inline: 1px;
 }

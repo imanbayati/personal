@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'website',
     'work',
-    'django_summernote',
     'django_quill',
 ]
 
