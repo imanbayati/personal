@@ -24,12 +24,12 @@
     <!-- Start Posts -->
     <div class="container">
       <div class="row">
-        {% for work in works %}
+        {% for post in posts %}
           <div class="col-12 col-lg-4">
             <div class="card border-0 card-work mb-5">
               <div class="card-img-top">
                 <div class="overlay">
-                  <a class="icon-over" href="{{work.file.url}}">
+                  <a class="icon-over" href="{{post.file.url}}">
                     <div class="text-center d-flex align-items-center d-block">
                       <button class="btn btn-warning d-flex hvr-shrink" type="button">
                         <i class="fa fa-download mt-1"></i>
@@ -38,7 +38,7 @@
                     </div>
                   </a>
                 </div>
-                <img class="img-fluid d-block mx-auto w-100" src="{{work.image.url}}" alt="picture" />
+                <img class="img-fluid d-block mx-auto w-100" src="{{post.image.url}}" alt="picture" />
               </div>
             </div>
           </div>
@@ -50,23 +50,23 @@
         <div class="col-12">
           <nav class="page">
             <ul class="pagination justify-content-center">
-              {% if works.has_previous %}
+              {% if posts.has_previous %}
               <li class="page-item me-2">
-                <a class="page-link" href="?page={{works.previous_page_number}}" aria-label="previous">
+                <a class="page-link" href="?page={{posts.previous_page_number}}" aria-label="previous">
                   <i aria-hidden="true" class="fa fa-chevron-right"></i>
                 </a>
               </li>
               {% endif %}
-              {% for page in works.paginator.page_range %}
-                {% if works.number == page %}
+              {% for page in posts.paginator.page_range %}
+                {% if posts.number == page %}
                 <li class="page-item me-2 active"><a class="page-link" href="?page={{page}}">{{page}}</a></li>
                 {% else %}
                 <li class="page-item me-2"><a class="page-link" href="?page={{page}}">{{page}}</a></li>
                 {% endif %}
               {% endfor %}
-              {% if works.has_next %}
+              {% if posts.has_next %}
               <li class="page-item me-2">
-                <a class="page-link" href="?page={{works.next_page_number}}" aria-label="next">
+                <a class="page-link" href="?page={{posts.next_page_number}}" aria-label="next">
                   <i aria-hidden="true" class="fa fa-chevron-left"></i>
                 </a>
               </li>

@@ -5,9 +5,9 @@ from django.contrib import messages
 from work.models import *
 # Create your views here.
 def home_page(request):
-    works = Work.objects.filter(status=1)[:6]
+    posts = Post.objects.filter(status=1)[:6]
     files = File.objects.all()
-    context = {'files': files,'works':works}
+    context = {'files': files,'posts':posts}
     return render(request, 'website/home.html',context)
 
 def contact_page(request):

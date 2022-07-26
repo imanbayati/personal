@@ -1,6 +1,5 @@
 from django.db import models
-
-
+from django.urls import reverse
 # Create your models here.
 
     
@@ -10,7 +9,7 @@ class Category(models.Model):
     def __str__(self):
         return self.name
     
-class Work(models.Model):
+class Post(models.Model):
     file = models.FileField(upload_to='files/',null=True)
     category = models.ManyToManyField(Category)
     name = models.CharField(max_length=100,null=True)
@@ -20,5 +19,9 @@ class Work(models.Model):
     update = models.DateTimeField(auto_now=True)
     class Meta:
         ordering = ['-publish']
+        
     def __str__(self):
-        return self.name    
+        return self.name  
+    
+    def get_absolute_url(self):
+        return reverse('work:home')  
