@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'django.contrib.sitemaps',
     'robots',
-    'debug_toolbar'
+    'debug_toolbar',
+    'django_extensions',
     
 ]
 #django debug toolbar
