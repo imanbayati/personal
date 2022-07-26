@@ -16,6 +16,7 @@ urlpatterns = [
     path('work/', include('work.urls')),
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps},
         name='django.contrib.sitemaps.views.sitemap'),
-    path('robots.txt', include('robots.urls')),  
+    path('robots.txt', include('robots.urls')),
+    path('debug', include('debug_toolbar.urls')),  
 ]
 urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

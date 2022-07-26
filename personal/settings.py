@@ -43,12 +43,19 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'django.contrib.sitemaps',
     'robots',
-
+    'debug_toolbar'
+    
+]
+#django debug toolbar
+INTERNAL_IPS = [
+    "127.0.0.1",
 ]
 
+#django sitemap
 SITE_ID = 1
 
 
+#django robots
 ROBOTS_USE_SITEMAP = False
 ROBOTS_USE_HOST = False
 
@@ -61,6 +68,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 from django.contrib.messages import constants as messages
