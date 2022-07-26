@@ -42,10 +42,16 @@ INSTALLED_APPS = [
     'django_quill',
     'django.contrib.sites',
     'django.contrib.sitemaps',
+    'robots',
 
 ]
 
 SITE_ID = 1
+
+
+ROBOTS_USE_SITEMAP = False
+ROBOTS_USE_HOST = False
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
