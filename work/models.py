@@ -10,7 +10,7 @@ class Category(models.Model):
         return self.name
     
 class Post(models.Model):
-    file = models.FileField(upload_to='files/',null=True)
+    url = models.CharField(max_length=500,default='https://imanbayati.github')
     category = models.ManyToManyField(Category)
     name = models.CharField(max_length=100,null=True)
     image = models.ImageField(upload_to='img/',default='img/default.jpg')
