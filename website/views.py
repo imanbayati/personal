@@ -6,9 +6,9 @@ from work.models import *
 # Create your views here.
 def home_page(request,pid=None):
     if pid != None:
-        posts = Post.objects.filter(status=1,post_id=pid)[:6]
+        posts = Post.objects.filter(status=1,post_id=pid)[:4]
     else:
-        posts = Post.objects.filter(status=1)[:6]
+        posts = Post.objects.filter(status=1)[:4]
    
     context = {'posts':posts}
     return render(request, 'website/home.html',context)

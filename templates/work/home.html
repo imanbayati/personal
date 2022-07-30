@@ -3,24 +3,6 @@
 {% block content %}
   <!-- Start Main -->
   <main>
-    <!-- Start Check Box -->
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <div class="d-flex category">
-            <p class="text-white category-title"><strong>دسته بندی بر اساس :</strong></p>
-            {% for category in categories %}
-            <a class="category-button me-2" href="{% url 'work:category' cat_name=category.name %}" type="submit">
-              <p class="text-white" name="{{category.name}}">{{category.name}}</p>
-            </a>
-            {% endfor %}        
-          </div>
-        </div>
-      </div>
-    </div>
-    <br /><br />
-    <!-- End Check Box -->
-
     <!-- Start Posts -->
     <div class="container">
       <div class="row">
