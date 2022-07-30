@@ -5,3 +5,6 @@ from . models import *
 admin.site.register(Post)
 
 admin.site.register(Category)
+class CommentFormAdmin(admin.ModelAdmin):
+    list_display = ['name' , 'email','post']
+admin.site.register(Comment,CommentFormAdmin)

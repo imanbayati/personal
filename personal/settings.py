@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'robots',
     'debug_toolbar',
     'django_extensions',
+    'django.contrib.humanize',
     
 ]
 #django debug toolbar

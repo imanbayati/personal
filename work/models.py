@@ -25,3 +25,15 @@ class Post(models.Model):
     
     def get_absolute_url(self):
         return reverse('work:home')  
+class Comment(models.Model):
+    post = models.ForeignKey(Post,on_delete=models.CASCADE)
+    name = models.CharField(max_length=300)
+    email = models.EmailField()
+    approved = models.BooleanField(default=False)
+    message = models.TextField()
+    create = models.DateTimeField(auto_now_add=True)
+    update = models.DateTimeField(auto_now=True)
+
+    
+    def __str__(self):
+        return self.name
