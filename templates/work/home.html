@@ -26,21 +26,27 @@
       <div class="row">
         {% for post in posts %}
           <div class="col-12 col-lg-4">
-            <div class="card border-0 card-work mb-5">
-              <div class="card-img-top">
-                <div class="overlay">
-                  <a target="_blank" class="icon-over" href="{{post.url}}">
-                    <div class="text-center d-flex align-items-center d-block">
-                      <button class="btn btn-warning d-flex hvr-shrink" type="button">
-                        <i class="fa fa-eye mt-1"></i>
-                        <p class="mb-0 ms-1">مشاهده آنلاین</p>
-                      </button>
-                    </div>
-                  </a>
-                </div>
-                <img class="img-fluid d-block mx-auto w-100" src="{{post.image.url}}" alt="picture" />
-              </div>
-            </div>
+						<div class="card border-0 card-work-2">
+							<div class="card-img-top">
+								<img class="img-fluid d-block mx-auto w-100" src="{{post.image.url}}" alt="picture">
+							</div>
+							<div class="card-body">
+								<div class="button-text d-flex justify-content-between">
+									<div class="d-flex mt-2">
+										<small class="text-white"> قالب :</small>
+										{% for cat in post.category.all %}
+										<small class="text-white ms-2">{{cat.name}}</small>
+										{% endfor %}
+									</div>
+									<div class="btn-contact">
+									<a href="{% url 'work:single' pid=post.id %}" class="btn btn-warning">
+										<i class="fa fa-eye"></i>
+										<p class="mb-0 ms-2 d-inline-block">مشاهده </p>
+									</a>
+									</div>
+								</div>
+							</div>
+						</div>
           </div>
         {% endfor %}
       </div>

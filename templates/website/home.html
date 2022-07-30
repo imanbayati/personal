@@ -79,17 +79,23 @@
 					{% for post in posts %}
 						<div class="card border-0 card-work me-3 mt-5 mb-5">
 							<div class="card-img-top">
-								<div class="overlay">
-									<a class="icon-over" href="{{post.file.url}}">
-										<div class="text-center d-flex align-items-center d-block">
-											<button class="btn btn-warning d-flex hvr-shrink" type="button">
-												<i class="fa fa-download mt-1"></i>
-												<p class="mb-0 ms-1">دانلود</p>
-											</button>
-										</div>
-									</a>
-								</div>
 								<img class="img-fluid d-block mx-auto w-100" src="{{post.image.url}}" alt="picture">
+							</div>
+							<div class="card-body p-0 py-2">
+								<div class="button-text d-flex justify-content-between">
+									<div class="d-flex mt-2">
+										<small class="text-white"> قالب :</small>
+										{% for cat in post.category.all %}
+										<small class="text-white ms-2">{{cat.name}}</small>
+										{% endfor %}
+									</div>
+									<div class="btn-contact">
+									<a href="{% url 'work:single' pid=post.id %}" class="btn btn-warning d-flex">
+										<i class="fa fa-eye mt-1"></i>
+										<small class="ms-2 d-inline-block">مشاهده </small>
+									</a>
+									</div>
+								</div>
 							</div>
 						</div>
 					{% endfor %}
@@ -97,10 +103,10 @@
 			</div>				
 				</div>
 				<a href = "{% url 'work:home' %}" >
-				<div class="pb-3 see-more-btn">
+				<div class="pb-4 see-more-btn">
 					<button class="btn btn-outline-warning d-flex hvr-shrink" type="button">
 						<i class="fa fa-eye mt-1"></i>
-						<p class="mb-0 ms-1">مشاهده</p>
+						<p class="mb-0 ms-1">مشاهده تمام نمونه کارها</p>
 					</button>
 				</div>
 				</a>

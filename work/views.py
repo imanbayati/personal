@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,get_object_or_404
 from . models import *
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 # Create your views here.
@@ -18,4 +18,10 @@ def home_page(request,cat_name=None):
         posts = posts.get_page(1) 
     context = {'posts':posts,'categories':categories}
     return render(request, 'work/home.html',context)
+
+def single_page(request,pid):
+    posts = Post.objects.filter(status=1)
+    post = get_object_or_404(posts,id=pid)
+    context = {'post':post}
+    return render(request, 'work/single.html',context)
 

@@ -1,50 +1,90 @@
-{% extends 'base.html' %}
+{% extends 'base.html'%}
 {% load static %}
 {% block content %}
-  <!-- Start Main -->
-  <main>
-    <!-- Start Check Box -->
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <form class="form-group check-site">
-            <div class="form-check form-check-inline m-0">
-              <input class="form-check-input" type="checkbox" name="django" />
-              <label class="form-check-label text-white" for="django"><small>django</small></label>
-            </div>
-            <div class="from-check form-check-inline m-0">
-              <input class="form-check-input" name="html" type="checkbox" />
-              <label class="form-check-label text-white" for="html"><small>html</small></label>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-    <br /><br />
-    <!-- End Check Box -->
 
-    <!-- Start Posts -->
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <p class="text-white mb-4">
-            <strong>همه قالب‌ها</strong>
-          </p>
-        </div>
-        {% for work in works %}
-          <div class="col-12">
-            <div class="card border-0 card-work-single mb-5">
-              <div class="card-img-top">
-                {{work.content.html|safe}}
-              </div>
-            </div>
-          </div>
-        {% endfor %}
-      </div>
-    </div>
+<!--Start Main-->
+	<main>
+		
+		<!--Start Post-->
+		<div class="container">
+			<div class="row">
+				<div class="col-12 col-lg-6">
+						<div class="card border-0 card-work-single mb-3">
+							<div class="card-img-top">
+								<img class="img-fluid d-block mx-auto w-100" src="img/Capture.PNG" alt="picture">
+							</div>
+						</div>
+						<div class="btn-contact d-flex mb-5 mb-lg-0 justify-content-center justify-content-lg-start">
+							<a href="#" class="btn btn-success text-white">
+								<i class="fa fa-eye"></i>
+								<p class="mb-0 ms-2 d-inline-block">مشاهده آنلاین</p>
+							</a>
+						</div>
+					</div>
+				<!--Start Form-->
+				<div class="col-12 col-lg-6">
+					<form class="contact-form">
+						<div class="container">
+							<div class="row">
+								<div class="col-12 col-lg-6">
+  									<div class="form-floating mb-4">
+    									<input type="text" class="form-control bg-transparent text-white" id="firstname" placeholder="نام و نام‌خانوادگی">
+   								 		<label for="firstname">نام و نام‌خانوادگی</label>
+  									</div>
+								</div>
+								<div class="col-12 col-lg-6">
+  									<div class="form-floating mb-4">
+    									<input type="email" class="form-control bg-transparent text-white" id="lastname" placeholder="ایمیل">
+   								 		<label for="lastname">ایمیل</label>
+									</div>
+								</div>
+								<div class="col-12">
+									<div class="form-floating mb-4">
+  										<textarea class="form-control bg-transparent text-white" placeholder="پیام شما" id="text"></textarea>
+  										<label for="text">پیام شما</label>
+									</div>
+								</div>
+								<div class="btn-contact mb-3">
+									<button class="btn btn-outline-warning" type="submit">ارسال پیام</button>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+				<!--End Form-->
+			</div>
+		</div>
+		
+		<br><br><br>
+		<!--End Post-->
+		
+		<!--Start Comments-->
+		<div class="container">
+			<div class="row">
+				<div class="slider-2st">
+					<div class="slider33">
+						<div class="col-12 col-lg-6">
+							<div class="card border-0 card-comment">
+								<div class="card-body">
+									<div class="d-flex">
+										<p class="text-white d-inline-block">ایمان بیاتی</p>
+										<small class="mt-1 ms-2">26/10/1384</small>
+									</div>
+									<p class="text-white text-start mb-0 mt-2">
+										It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!--End Comments-->
 
-    <br><br><br>
-    <!-- End Posts -->
-  </main>
-  <!-- End Main -->
+		
+		
+	</main>
+	<!--End Main-->
 {% endblock %}

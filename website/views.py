@@ -4,10 +4,13 @@ from . forms import ContactForm
 from django.contrib import messages
 from work.models import *
 # Create your views here.
-def home_page(request):
-    posts = Post.objects.filter(status=1)[:6]
-    files = File.objects.all()
-    context = {'files': files,'posts':posts}
+def home_page(request,pid=None):
+    if pid != None:
+        posts = Post.objects.filter(status=1,post_id=pid)[:6]
+    else:
+        posts = Post.objects.filter(status=1)[:6]
+   
+    context = {'posts':posts}
     return render(request, 'website/home.html',context)
 
 def contact_page(request):
