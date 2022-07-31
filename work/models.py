@@ -24,7 +24,8 @@ class Post(models.Model):
         return self.name  
     
     def get_absolute_url(self):
-        return reverse('work:home')  
+        return reverse('work:single',kwargs={'pid':self.id}) 
+     
 class Comment(models.Model):
     post = models.ForeignKey(Post,on_delete=models.CASCADE)
     name = models.CharField(max_length=300)

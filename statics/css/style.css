@@ -1,4 +1,6 @@
 @charset "utf-8";
+
+
 /* CSS Document */
 .navbar-menu{
 	border-bottom: 1px solid #797d7f;
@@ -104,7 +106,6 @@ line-height: 3;
 .card-work, .card-work .card-img-top img, .card-work-2 .card-img-top img{
 	border-radius: 3px 3px 0 0;
 	height: 400px;
-	max-width: auto;
 }
 
 .card-work-2{
@@ -225,9 +226,6 @@ footer small{
 .category .category-button p:hover{
 	color: #ffc925 !important;
     transition: .2s;
-}
-.category .category-button p::target-text{
-	color: #ffc925 !important;
 }
 .page li a{
 	border-radius: 100% !important;
