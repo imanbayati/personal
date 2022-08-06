@@ -5,7 +5,7 @@ SECRET_KEY = 'django-insecure-b!x_e2vm7)e=v(2se-mw2+pfd8megd)%3z+#%89q2n(-d=#kom
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['www.bayatipro.ir','bayatipro.ir']
+ALLOWED_HOSTS = ['www.bayatipro.ir','bayatipro.ir','127.0.0.1']
 
 #django sitemap
 SITE_ID = 1
@@ -22,6 +22,7 @@ DATABASES = {
 
 STATIC_ROOT = BASE_DIR / 'static'
 MEDIA_ROOT = BASE_DIR / 'media'
+STATICFILES_DIRS = [ BASE_DIR / 'statics' ]
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 CSRF_COOKIE_SECURE = True
