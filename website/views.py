@@ -9,8 +9,8 @@ def home_page(request,pid=None):
         posts = Post.objects.filter(status=1,post_id=pid)[:4]
     else:
         posts = Post.objects.filter(status=1)[:4]
-   
-    context = {'posts':posts}
+    files = File.objects.all()
+    context = {'posts':posts,'files':files}
     return render(request, 'website/home.html',context)
 
 def contact_page(request):
