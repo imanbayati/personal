@@ -3,9 +3,9 @@ from personal.settings import *
 SECRET_KEY = 'django-insecure-b!x_e2vm7)e=v(2se-mw2+pfd8megd)%3z+#%89q2n(-d=#kom'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['www.bayatipro.ir','bayatipro.ir']
 
 #django sitemap
 SITE_ID = 1
