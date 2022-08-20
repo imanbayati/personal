@@ -9,6 +9,17 @@
 		<!--Start Post-->
 		<div class="container">
 			<div class="row">
+				<div class="col-12 col-lg-4">
+				  {% for message in messages %}
+					<div class="alert {{ message.tags }} fade show alert-dismissible d-flex" role="alert">
+					  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+					  <p class="mb-0 ms-4">{{ message }}</p>
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+
+			<div class="row">
 				<div class="col-12 col-lg-6">
 						<div class="card border-0 card-work-single mb-3">
 							<div class="card-img-top">
@@ -57,16 +68,7 @@
 					</form>
 				</div>
 				<!--End Form-->
-				<div class="row">
-					<div class="col-12 col-lg-4">
-					  {% for message in messages %}
-						<div class="alert {{ message.tags }} fade show alert-dismissible d-flex" role="alert">
-						  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-						  <p class="mb-0 ms-4">{{ message }}</p>
-						</div>
-						{% endfor %}
-					</div>
-				  </div>
+				
 			
 			</div>
 		</div>

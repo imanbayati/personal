@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!--Start Main-->
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="404-items justify-content-center flex-column">
+                <img class="img-responsive img-fluid" src="{% static 'img/Oops! 404 Error with a broken robot-rafiki' %}" alt="Oops!">
+                <a class="mt-5 btn btn-danger" href="{% url 'website:home' %}">
+                    <p>بازگشت به صفحه اصلی</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--End Main-->
+{% endblock %}

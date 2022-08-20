@@ -24,3 +24,4 @@ def contact_page(request):
     form = ContactForm()
     context = {'form': form}
     return render(request, 'website/contact.html',context)
+
