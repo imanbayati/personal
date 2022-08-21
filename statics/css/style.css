@@ -21,7 +21,7 @@ nav{
 	background-color: #020513;
 }
 .memoji img{
-	border-radius: 100%;
+	clip-path: circle();
 	width: 67px;
 	height: auto;
 	margin-right: -18px;
