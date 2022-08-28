@@ -26,6 +26,11 @@
 								<img class="img-fluid d-block mx-auto w-100" src="{{post.image.url}}" alt="picture">
 							</div>
 						</div>
+						{% for cat in post.category.all %}
+						{% if cat.name == 'html'  %}
+						<small class="text-white mb-3 d-block">* لطفا برای مشاهده فیلترشکن خود را روشن کنید</small>
+						{% endif %}
+						{% endfor %}
 						<div class="btn-contact d-flex mb-5 mb-lg-0 justify-content-center justify-content-lg-start">
 							<a target="_blank" href="{{post.url}}" class="btn btn-success text-white">
 								<i class="fa-solid fa-laptop"></i>

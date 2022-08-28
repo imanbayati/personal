@@ -34,6 +34,7 @@ def single_page(request,pid):
     posts = Post.objects.filter(status=1)
     post = get_object_or_404(posts,id=pid)
     comments = Comment.objects.filter(post=post.id,approved=True)
-    context = {'post':post,'form':form,'comments':comments}
+    categories = Category.objects.all()
+    context = {'post':post,'form':form,'comments':comments,'categories':categories}
     return render(request, 'work/single.html',context)
 
